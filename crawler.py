@@ -56,7 +56,7 @@ class Crawler(object):
             
             #print("S-ulr : " +s) #DEBUGG
             
-            if any(sub in s for sub in ('.css', '.js', '.woff2','.png','.jpg','.ico','#', '?', 'javascript')):
+            if any(sub in s for sub in ('.css', '.js', '.woff2','.png','.jpg','.ico','//','#', '?', 'javascript')):
                 continue
             
             # Exclude all relative links Joomla Typo
