@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+  xmlns:orfon="http://rss.orf.at/1.0/"
+  xmlns="http://purl.org/rss/1.0/"
+>
+<channel rdf:about="https://orf.at/">
+   <title>news.ORF.at</title>
+   <link>https://orf.at/</link>
+   <dc:date>2024-01-05T11:26:51+01:00</dc:date>
+      <description>Die aktuellsten Nachrichten auf einen Blick - aus Österreich und der ganzen Welt. In Text, Bild und Video.</description>
+   <dc:publisher>ORF Österreichischer Rundfunk, Wien</dc:publisher>
+   <dc:creator>ORF Online und Teletext GmbH &amp; Co KG</dc:creator>
+   <dc:language>de</dc:language>
+   <dc:rights>Copyright &#169; 2024 ORF Online und Teletext GmbH &amp; Co KG</dc:rights>
+   <sy:updatePeriod>hourly</sy:updatePeriod>
+   <sy:updateFrequency>2</sy:updateFrequency>
+   <sy:updateBase>2000-01-01T00:00:00Z</sy:updateBase>
+   <orfon:site>news.ORF.at</orfon:site>
+
+
+
+   <items>
+      <rdf:Seq>
+         <rdf:li rdf:resource="https://orf.at/stories/3344822/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344820/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344814/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344807/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344806/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344799/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344798/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344797/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344796/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344795/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344794/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344793/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344792/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3343524/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344790/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344789/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344788/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344728/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344714/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344783/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344782/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344781/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344780/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344779/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344777/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344715/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344775/" />
+
+   <rdf:li rdf:resource="https://orf.at/stories/3344774/" />
+
+
+      </rdf:Seq>
+   </items>
+</channel>
+<item rdf:about="https://orf.at/stories/3344822/">
+   <title>Unternehmer Günther Fielmann ist tot</title>
+   
+   <link>https://orf.at/stories/3344822/</link>
+   <dc:subject>Wirtschaft</dc:subject>
+   <dc:date>2024-01-05T11:26:51+01:00</dc:date>
+
+   <orfon:usid>news:3344822</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Wirtschaft/Wirtschaftspolitik" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344820/">
+   <title>Integrationsprojekte: Künftig „Werteklausel“ bei Förderung</title>
+   
+   <link>https://orf.at/stories/3344820/</link>
+   <dc:subject>Inland</dc:subject>
+   <dc:date>2024-01-05T11:02:29+01:00</dc:date>
+
+   <orfon:usid>news:3344820</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikInland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344814/">
+   <title>Katzian fordert weiter 2.000 Euro Einstiegseinkommen</title>
+   
+   <link>https://orf.at/stories/3344814/</link>
+   <dc:subject>Inland</dc:subject>
+   <dc:date>2024-01-05T09:48:41+01:00</dc:date>
+
+   <orfon:usid>news:3344814</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikInland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344807/">
+   <title>Pistorius auf Bewährung aus Haft entlassen</title>
+   <description>Knapp elf Jahre nach den tödlichen Schüssen auf seine Freundin Reeva Steenkamp ist der frühere südafrikanische Sprintstar Oscar Pistorius auf Bewährung aus der Haft entlassen worden. Der 37-Jährige habe am Freitag die Haftanstalt in einem Vorort von Pretoria verlassen, teilten die Behörden mit. Pistorius sei „jetzt zu Hause“, hieß es. „Wir, die zurückbleiben, sind diejenigen, die eine lebenslange Strafe verbüßen“, so Steenkamps Mutter.</description>
+   <link>https://orf.at/stories/3344807/</link>
+   <dc:subject>Chronik</dc:subject>
+   <dc:date>2024-01-05T08:38:01+01:00</dc:date>
+
+   <orfon:usid>news:3344807</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Nachrichten/Chronik" />
+   <orfon:storyType rdf:resource="urn:orfon:type:story" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344806/">
+   <title>Grünen- und NEOS-Anfragen zu Benko-Steueroptimierung</title>
+   
+   <link>https://orf.at/stories/3344806/</link>
+   <dc:subject>Inland</dc:subject>
+   <dc:date>2024-01-05T08:31:03+01:00</dc:date>
+
+   <orfon:usid>news:3344806</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikInland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344799/">
+   <title>Vegane Kochlehre: Ruf nach Kocher-Initiative</title>
+   
+   <link>https://orf.at/stories/3344799/</link>
+   <dc:subject>Inland</dc:subject>
+   <dc:date>2024-01-05T07:51:24+01:00</dc:date>
+
+   <orfon:usid>news:3344799</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikInland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344798/">
+   <title>Zadic: Mehrbedarf an Richtern wegen Handysicherstellung</title>
+   
+   <link>https://orf.at/stories/3344798/</link>
+   <dc:subject>Inland</dc:subject>
+   <dc:date>2024-01-05T07:41:06+01:00</dc:date>
+
+   <orfon:usid>news:3344798</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikInland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344797/">
+   <title>„Mary Poppins“-Star Glynis Johns mit 100 Jahren gestorben</title>
+   
+   <link>https://orf.at/stories/3344797/</link>
+   <dc:subject>Kultur</dc:subject>
+   <dc:date>2024-01-05T07:19:57+01:00</dc:date>
+
+   <orfon:usid>news:3344797</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:KulturUndFreizeit/FilmUndKino" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344796/">
+   <title>Beben in Japan: Mehr als 240 Menschen vermisst</title>
+   
+   <link>https://orf.at/stories/3344796/</link>
+   <dc:subject>Chronik</dc:subject>
+   <dc:date>2024-01-05T06:47:43+01:00</dc:date>
+
+   <orfon:usid>news:3344796</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Nachrichten/Chronik" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344795/">
+   <title>UNO-Nothilfebüro: Tagelang kein Zugang zum Norden Gazas</title>
+   
+   <link>https://orf.at/stories/3344795/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-01-05T06:43:30+01:00</dc:date>
+
+   <orfon:usid>news:3344795</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344794/">
+   <title>Ukraine: Kommandoposten in Sewastopol angegriffen</title>
+   
+   <link>https://orf.at/stories/3344794/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-01-05T06:39:00+01:00</dc:date>
+
+   <orfon:usid>news:3344794</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344793/">
+   <title>30 Jahre Spice Girls: Britische Post druckt Briefmarken</title>
+   
+   <link>https://orf.at/stories/3344793/</link>
+   <dc:subject>Chronik</dc:subject>
+   <dc:date>2024-01-05T06:33:49+01:00</dc:date>
+
+   <orfon:usid>news:3344793</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Nachrichten/Chronik" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344792/">
+   <title>D: Wütende Bauern hindern Habeck am Verlassen einer Fähre</title>
+   
+   <link>https://orf.at/stories/3344792/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-01-05T06:24:23+01:00</dc:date>
+
+   <orfon:usid>news:3344792</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3343524/">
+   <title>EU-Ratsvorsitz mit „Zeitverkürzung“</title>
+   <description>Zum Jahreswechsel hat Belgien turnusgemäß für sechs Monate die Präsidentschaft im Rat der Europäischen Union von Spanien übernommen. In der zweiten Jahreshälfte folgt dann Ungarn. Wegen der Europawahlen – gleichzeitig mit Parlamentswahlen – im Juni hat die belgische Ratspräsidentschaft aber weniger Zeit, um ihre Vorhaben durchzubringen.</description>
+   <link>https://orf.at/stories/3343524/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-01-05T06:10:54+01:00</dc:date>
+
+   <orfon:usid>news:3343524</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:story" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344790/">
+   <title>Südkorea ordnet Evakuierungen auf Inseln an</title>
+   <description>Nordkorea hat am Freitag nach Angaben des südkoreanischen Verteidigungsministeriums mehr als 200 Granaten in der Nähe von zwei südkoreanischen Inseln abgefeuert. Die Bewohner und Bewohnerinnen der Inseln wurden aufgefordert, sich in Sicherheit zu bringen. Seoul bezeichnete das Artilleriefeuer als „provokativen Akt, der den Frieden auf der koreanischen Halbinsel gefährdet“. Erst zuletzt hatte Südkorea gemeinsame Militärübungen mit den USA abgehalten.</description>
+   <link>https://orf.at/stories/3344790/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-01-05T05:56:09+01:00</dc:date>
+
+   <orfon:usid>news:3344790</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:story" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344789/">
+   <title>Leichtes Erdbeben in Kärnten</title>
+   
+   <link>https://orf.at/stories/3344789/</link>
+   <dc:subject>Chronik</dc:subject>
+   <dc:date>2024-01-05T04:29:47+01:00</dc:date>
+
+   <orfon:usid>news:3344789</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Nachrichten/Chronik" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344788/">
+   <title>Viele Verletzte nach U-Bahn-Zusammenstoß in New York</title>
+   
+   <link>https://orf.at/stories/3344788/</link>
+   <dc:subject>Chronik</dc:subject>
+   <dc:date>2024-01-04T23:48:15+01:00</dc:date>
+
+   <orfon:usid>news:3344788</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Nachrichten/Chronik" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344728/">
+   <title>Neue Phase in Gaza-Krieg</title>
+   <description>Israel tritt im Krieg gegen die Terrororganisation Hamas nach deren Überfall am 7. Oktober in eine neue Phase ein. Was sich bereits seit Tagen abzeichnete, bestätigte Donnerstagabend Verteidigungsminister Joav Galant. Israel fehlt aber weiter eine Strategie für den „Tag danach“ – hier eröffnete Galant nun öffentlich die Debatte.</description>
+   <link>https://orf.at/stories/3344728/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-01-04T23:35:25+01:00</dc:date>
+
+   <orfon:usid>news:3344728</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:story" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344714/">
+   <title>Werbeabos sollen Streamingriesen retten</title>
+   <description>Der Streaminganbieter Amazon Prime Video informiert aktuell per E-Mail über ein neues Geschäftsmodell: Künftig wolle man auf mehr Werbung setzen, eine werbefreie Option wird gegen Zahlung einer Zusatzgebühr in Aussicht gestellt. Die Ankündigung verdeutlicht den Richtungswechsel in der umkämpften Branche – und zeigt einmal mehr, dass der „Streamingboom“ zumindest vorerst seinen Peak erreicht hat.</description>
+   <link>https://orf.at/stories/3344714/</link>
+   <dc:subject>Wirtschaft</dc:subject>
+   <dc:date>2024-01-04T21:54:33+01:00</dc:date>
+
+   <orfon:usid>news:3344714</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Wirtschaft/Unternehmensberichterstattung" />
+   <orfon:storyType rdf:resource="urn:orfon:type:story" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344783/">
+   <title>Millionenklage: New York erhöht Druck wegen Migranten</title>
+   
+   <link>https://orf.at/stories/3344783/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-01-04T21:42:30+01:00</dc:date>
+
+   <orfon:usid>news:3344783</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344782/">
+   <title>US-Militär tötet proiranische Milizionäre im Irak</title>
+   
+   <link>https://orf.at/stories/3344782/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-01-04T21:25:43+01:00</dc:date>
+
+   <orfon:usid>news:3344782</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344781/">
+   <title>Galant: Palästinenser nach Krieg für Gaza verantwortlich</title>
+   
+   <link>https://orf.at/stories/3344781/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-01-04T21:10:45+01:00</dc:date>
+
+   <orfon:usid>news:3344781</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344780/">
+   <title>Südtirol: Inhaltliche Einigung der Koalitionsverhandler</title>
+   
+   <link>https://orf.at/stories/3344780/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-01-04T20:50:59+01:00</dc:date>
+
+   <orfon:usid>news:3344780</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344779/">
+   <title>Blinken reist erneut durch den Nahen Osten</title>
+   
+   <link>https://orf.at/stories/3344779/</link>
+   <dc:subject>Ausland</dc:subject>
+   <dc:date>2024-01-04T20:11:19+01:00</dc:date>
+
+   <orfon:usid>news:3344779</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Politik/PolitikAusland" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344777/">
+   <title>Über Weihnachten zu Hause: 255 Häftlinge in Rio flüchtig</title>
+   
+   <link>https://orf.at/stories/3344777/</link>
+   <dc:subject>Chronik</dc:subject>
+   <dc:date>2024-01-04T20:07:02+01:00</dc:date>
+
+   <orfon:usid>news:3344777</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Nachrichten/Chronik" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344715/">
+   <title>Auch Österreich steht Wintereinbruch bevor</title>
+   <description>Das neue Jahr hat im Norden Europas mit extremer Kälte begonnen: In Schweden und Finnland wurden diese Woche teilweise weit unter minus 30 Grad Celsius gemessen. Während es in Skandinavien gegen Wochenende etwas wärmer wird, steht Österreich der nächste Wintereinbruch bevor. In der Nacht auf Sonntag sinken Schneefallgrenze und Temperaturen, die kommende Woche wird im ganzen Land frostig, so die ORF-Wetterredaktion.</description>
+   <link>https://orf.at/stories/3344715/</link>
+   <dc:subject>Wetter</dc:subject>
+   <dc:date>2024-01-04T19:59:04+01:00</dc:date>
+
+   <orfon:usid>news:3344715</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Wetter/Oesterreichwetter" />
+   <orfon:storyType rdf:resource="urn:orfon:type:story" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344775/">
+   <title>UNO erwartet langsameres globales Wirtschaftswachstum</title>
+   
+   <link>https://orf.at/stories/3344775/</link>
+   <dc:subject>Wirtschaft</dc:subject>
+   <dc:date>2024-01-04T19:49:43+01:00</dc:date>
+
+   <orfon:usid>news:3344775</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:Wirtschaft/Wirtschaftspolitik" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+<item rdf:about="https://orf.at/stories/3344774/">
+   <title>Militärexperte Gressel zum Ukraine-Krieg</title>
+   
+   <link>https://orf.at/stories/3344774/</link>
+   <dc:subject>Medien</dc:subject>
+   <dc:date>2024-01-04T19:49:16+01:00</dc:date>
+
+   <orfon:usid>news:3344774</orfon:usid>
+   <orfon:oewaCategory rdf:resource="urn:oewa:RedCont:MedienUndWerbung/Medien" />
+   <orfon:storyType rdf:resource="urn:orfon:type:ticker" />
+</item>
+
+
+</rdf:RDF>
+
+

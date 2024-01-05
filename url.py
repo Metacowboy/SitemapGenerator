@@ -3,6 +3,17 @@ import global_vars
 
 class URL(object):
 	def __init__(self, url):
+		
+		# Relative URL HOME/meinSubUrl METAMODE
+		if (global_vars.starting_url not in url) and len(url)>2 and url.startswith('/'):
+			url = global_vars.starting_url + url
+
+		# Meta verify that we have a https or http protokole
+		if not (url.startswith('https://') or url.startswith('http://')): 
+			url = 'https://' + url
+			global_vars.starting_url = url
+			#print("MYURL: " +url)
+
 		# grab the url to save a couple versions (if need)
 		self.complete_url = url
 		self.clean_url = url.replace(global_vars.starting_url, "/")
@@ -10,6 +21,8 @@ class URL(object):
 		#verify there is a trailing slash at the end of the url
 		if self.clean_url[-1:] != "/":
 			self.clean_url += "/"
+
+		
 
 		# general variables just for storing/data purposes (they may never be used but might later on)
 		self.crawl_depth = self.clean_url.count("/") - 1

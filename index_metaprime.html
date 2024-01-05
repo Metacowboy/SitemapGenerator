@@ -1,0 +1,99 @@
+<html><head><title>Website Visual Sitemap</title>
+<link rel="stylesheet" href="js/Treant.css">
+<link rel="stylesheet" href="js/connectors.css">
+<script src="js/raphael.js"></script>
+<script src="js/Treant.js"></script>
+</head>
+<body>
+<div id="treemap-chart"></div>
+<script>
+    var chart_config = {
+        chart: {
+            container: "#treemap-chart",
+            levelSeparation: 25,
+            connectors: {                type: "step",
+                style: {                    "stroke-width": 1
+                }
+            },
+            node: {
+                HTMLclass: "treemap"            }
+       },
+       nodeStructure: {           text: { name: "https://metaprime.at" },
+           connectors: {               style: {
+                   'stroke': '#bbb',
+                   'arrow-end': 'block-wide-long'
+               }
+           },
+       children: [
+       {
+           text: { name: "//" },
+           stackChildren: true,
+           connectors: {
+               style: {
+                   'arrow-end': 'block-wide-long'
+               }
+           },
+           children: [ 
+{ text: { name: "/" } },{ text: { name: "/agb/" } },{ text: { name: "/contact/" } },{ text: { name: "/datenschutz/" } },           { 
+text: { name: "/der-prozess/" } },           { 
+text: { name: "...8 more pages " } }]
+},
+       {
+           text: { name: "//comments/" },
+           stackChildren: true,
+           connectors: {
+               style: {
+                   'arrow-end': 'block-wide-long'
+               }
+           }},
+       {
+           text: { name: "//project/" },
+           stackChildren: true,
+           connectors: {
+               style: {
+                   'arrow-end': 'block-wide-long'
+               }
+           },
+           children: [ 
+{ text: { name: "/ai-chat-bot-artificial-intelligence/" } },{ text: { name: "/best-of-tab/" } },{ text: { name: "/finance-webseite/" } },{ text: { name: "/livestream/" } },           { 
+text: { name: "/metaanalytik/" } },           { 
+text: { name: "...2 more pages " } }]
+},
+       {
+           text: { name: "//testimonial/" },
+           stackChildren: true,
+           connectors: {
+               style: {
+                   'arrow-end': 'block-wide-long'
+               }
+           },
+           children: [ 
+{ text: { name: "/social-media-strategy-seo/" } },           { 
+text: { name: "/webdesign-wien/" } }]
+},
+       {
+           text: { name: "//wp-content/uploads/" },
+           stackChildren: true,
+           connectors: {
+               style: {
+                   'arrow-end': 'block-wide-long'
+               }
+           },
+           children: [ 
+           { 
+text: { name: "/Metaprimelogo-35x35.png/" } }]
+},
+       {
+           text: { name: "//wp-json/wp/v2/pages/" },
+           stackChildren: true,
+           connectors: {
+               style: {
+                   'arrow-end': 'block-wide-long'
+               }
+           }},
+] }
+};
+new Treant( chart_config );
+</script>
+</body>
+</html>
