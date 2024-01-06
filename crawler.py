@@ -37,31 +37,56 @@ class Crawler(object):
         hdr = { 'User-Agent' : 'Mozilla/5.0 (Windows NT 6.1; Win64; x64)' }
         
         # pprint(vars(u)) # DEBUGG META
-        metareq = req.Request(u.complete_url, headers=hdr)
+        try:
+            metareq = req.Request(u.complete_url, headers=hdr)
 
-        x = req.urlopen(metareq ).read().decode('utf-8', errors='ignore')
+            x = req.urlopen(metareq ).read().decode('utf-8') #, errors='ignore'
         
-        #print(x) #debugg
+            #print(x) #debugg
+        except urllib2.HTTPError(e):
+            print ('We failed with error code - %s.' % e.code )
+            return False
+        
+        else:
+            for s in re.findall('href="(.*?)"', x, re.S):
+                u.has_been_crawled = True
+                
+                # Find Canonical URL for Relative html urls ORF
+                if s.endswith('.html'):
+                    print('ORGURL :' + s)
 
-        for s in re.findall('href="(.*?)"', x, re.S):
-            u.has_been_crawled = True
-            
-            # MEtaMode PRE If Relative URL /meinSubUrl
-            if (global_vars.starting_url not in s) and len(s)>2 and s.startswith('/') :
-                s = global_vars.starting_url + s
+                    canonical_url = re.findall('<link\s+rel="canonical"\s+href=["\'](\S+?)["\']' , x)
+                    print('REGEX CANO' , canonical_url )
+                    if canonical_url:
+                            canonical_url = canonical_url[0].rsplit('/', 1)[0] + '/'
+                            print('CANONIC' , canonical_url )
+                            s = canonical_url + s
+                    else: 
+                    
+                            print('Not Relative HTML' , s)
 
-            
-            #print("S-ulr : " +s) #DEBUGG
-            if any(sub in s for sub in ('{{link}}','data.href','.css', '.js', '.woff2','.png','.jpg','.ico','#', '?', 'javascript')):
-                continue
-            
-            # Exclude all relative links Joomla Typo
-            #if global_vars.starting_url not in s:
-            #    continue
-            
-            # Add to URL List s to List if not already added
-            if s not in [url.complete_url for url in global_vars.url_list]:
-                global_vars.url_list.append(URL(s))
+                    
+                    
+                    
+
+                
+
+                # MEtaMode PRE If Relative URL /meinSubUrl
+                if (global_vars.starting_url not in s) and len(s)>2 and s.startswith('/') :
+                    s = global_vars.starting_url + s
+
+                
+                #print("S-ulr : " +s) #DEBUGG
+                if any(sub in s for sub in ('{{link}}','data.href','.css', '.js', '.woff2','.png','.jpg','.ico','#', '?', 'javascript')):
+                    continue
+                
+                # Exclude all relative links Joomla Typo
+                #if global_vars.starting_url not in s:
+                #    continue
+                
+                # Add to URL List s to List if not already added
+                if s not in [url.complete_url for url in global_vars.url_list]:
+                    global_vars.url_list.append(URL(s))
 
     def save(self):
         with open('urls.txt', 'w') as f:

@@ -9,10 +9,13 @@ class URL(object):
 			url = global_vars.starting_url + url
 
 		# Meta verify that we have a https or http protokole
-		if not (url.startswith('https://') or url.startswith('http://')): 
+		if not (url.startswith('https://') or url.startswith('http://') or url.endswith('.html')): 
 			url = 'https://' + url
 			global_vars.starting_url = url
 			#print("MYURL: " +url)
+
+		# GET CANONICAL to Build relative html pages 
+		# TODO
 
 		# grab the url to save a couple versions (if need)
 		self.complete_url = url

@@ -23,3 +23,7 @@ body { background: #fff; font-family: "Droid Serif",Georgia,"Times New Roman",Ti
 	text-align: center;
 	padding: 10px;
 }
+a.node-contact {
+    text-align: center;
+    padding: 10px;
+}
