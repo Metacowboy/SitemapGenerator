@@ -6,8 +6,6 @@ from sitemap import Sitemap
 from visual_sitemap import VisualSitemap
 from pprint import pprint
 
-# Bugs: - Needs a bit too long sometimes Timeout Error 
-
 
 class Crawler(object):
     def __init__(self):
@@ -19,7 +17,6 @@ class Crawler(object):
             for u in global_vars.url_list:
                 if not u.has_been_crawled:
                     self.crawl(u)
-                #if len(global_vars.url_list) >= 512:
                 if len(global_vars.url_list) >= global_vars.urls_tocrawl:    
                     break
             self.save()
@@ -55,14 +52,14 @@ class Crawler(object):
 
             
             #print("S-ulr : " +s) #DEBUGG
-            if any(sub in s for sub in ('.css', '.js', '.woff2','.png','.jpg','.ico','#', '?', 'javascript')):
+            if any(sub in s for sub in ('{{link}}','data.href','.css', '.js', '.woff2','.png','.jpg','.ico','#', '?', 'javascript')):
                 continue
             
             # Exclude all relative links Joomla Typo
-            if global_vars.starting_url not in s:
-                continue
+            #if global_vars.starting_url not in s:
+            #    continue
             
-            # BUG DUBLICATE Add URL s to List if not already added
+            # Add to URL List s to List if not already added
             if s not in [url.complete_url for url in global_vars.url_list]:
                 global_vars.url_list.append(URL(s))
 

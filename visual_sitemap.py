@@ -51,18 +51,6 @@ class VisualSitemap(object):
 			if parent_url == "/":
 				continue
 			if parent_url_count == parent_url_length:
-				#js_nodes += "       {\n" \
-				#                    "           text: { name: \"" + parent_url + "\" },\n" \
-				#                    "           stackChildren: true,\n" \
-				#                    "           contact: { ,\n" \
-				#                    "               href: \"twitter.com\",\n"\
-				#                    "           }, \n" \
-				#                    "           connectors: {\n" \
-				#                    "               style: {\n" \
-				#                    "                   'arrow-end': 'block-wide-long'\n" \
-				#                    "               }\n" \
-				#                    "           }"
-
 				# DEF META mit Links
 				js_nodes += "        {\n" \
 									"			text: {\n" \
@@ -103,7 +91,7 @@ class VisualSitemap(object):
 			else:
 				js_nodes += "       {\n" \
 									"           text: { \n" \
-									"					name: \"" + parent_url + "\", \n" \
+									"					name: \"META-TOP" + parent_url + "\", \n" \
 									"					contact: { \n" \
 									"						val: \""+ parent_url + "\",\n" \
 									"						href: \""+ parent_url + "\",\n" \
@@ -140,14 +128,21 @@ class VisualSitemap(object):
 												 "} }"
 							else:
 								js_nodes += "           { \n" \
-										"text: { name: \"META-PLAN2" + child_url + "\" } },"
+										"text: { \n" \
+												"name: \"META-PLAN2" + child_url + "\", \n" \
+												"contact: { \n" \
+														"val: \""+ child_url + "\",\n" \
+														"href: \""+ child_url + "\",\n" \
+														"target: \"_blank\"\n" \
+												"}\n" \
+												"} },"
 								js_nodes += "           { \n" \
 										"text: { name: \"..." + str(len(global_vars.url_tree[parent_url]) - child_url_length) + " more pages \" } }"
 							break
 						else:
 							js_nodes += "{ " \
 											"text: { \n" \
-													"name: \"META-LAST" + child_url + "\", \n" \
+													"name: \"META-LAST" + parent_url + child_url + "\", \n" \
 												    "contact: {\n" \
 												    	"val:  \""+ child_url + "\",\n" \
 												    	"href: \""+ child_url + "\",\n" \
