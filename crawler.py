@@ -6,8 +6,6 @@ from url import URL
 from sitemap import Sitemap
 from visual_sitemap import VisualSitemap
 from pprint import pprint
-from urllib.parse import urlparse
-
 
 
 class Crawler(object):
@@ -18,9 +16,6 @@ class Crawler(object):
         if not global_vars.sitemap_xml_file_path:
             self.crawl(URL(global_vars.starting_url))
             for u in global_vars.url_list:
-                # DEF VAlidate URL DEF
-                #if not self.uri_validator(u.complete_url):
-                #    continue
                 if not u.has_been_crawled:
                     self.crawl(u)
                 if len(global_vars.url_list) >= global_vars.urls_tocrawl:    
@@ -38,42 +33,26 @@ class Crawler(object):
             print("Stopped")
             return
             
-    
-    def uri_validator(self, x):
-                try:
-                    result = urlparse(x)
-                    return all([result.scheme, result.netloc])
-                except:
-                    return False
 
     def crawl(self, u):
         hdr = { 'User-Agent' : 'Mozilla/5.0 (Windows NT 6.1; Win64; x64)' }
+        
         # pprint(vars(u)) # DEBUGG META
-
-        #Validator url 
-        #print('URL VALID  : ')
-        #print(u.complete_url)
-        #print(self.uri_validator(u.complete_url))
-        
-        #if not self.uri_validator(u.complete_url):
-        #        return False
-        
-        
         try:
             metareq = req.Request(u.complete_url, headers=hdr)
-            x = req.urlopen(metareq ).read().decode('utf-8', errors='ignore' ) #, errors='ignore' 
+
+            x = req.urlopen(metareq).read().decode('utf-8') #, errors='ignore'
         
             #print(x) #debugg
-
-        except urllib.error.HTTPError as err:
-            print(f'A HTTPError was thrown: {err.code} {err.reason}')
+        except urllib.error.HTTPError(e):
+            print ('We failed with error code - %s.' % e.code )
             return False
         
         else:
             for s in re.findall('href="(.*?)"', x, re.S):
                 u.has_been_crawled = True
                 
-                # Find Canonical URL for Relative html urls ORF
+                # Find Canonical URL for Relative html urls ORF #Add Canonical_Root + Relative 
                 if s.endswith('.html'):
                     canonical_url = re.findall('<link\s+rel="canonical"\s+href=["\'](\S+?)["\']' , x)
                     if canonical_url:
@@ -93,12 +72,12 @@ class Crawler(object):
                     continue
 
                 #Excluded URLs
-                if any(sub in s for sub in ('./','mailto:','tel:','{{link}}','data.href','.css', '.js', '.woff2','.png','.jpg','.ico','#', '?', 'javascript')):
+                if any(sub in s for sub in ('{{link}}','data.href','.css', '.js', '.woff2','.png','.jpg','.ico','#', '?', 'javascript')):
                     continue
                 
                 # Exclude all relative links Joomla Typo
-                #if global_vars.starting_url not in s:
-                #    continue
+                if global_vars.starting_url not in s:
+                    continue
                 
                 # Add to URL List s to List if not already added
                 if s not in [url.complete_url for url in global_vars.url_list]:
