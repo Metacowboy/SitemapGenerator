@@ -3,7 +3,7 @@ import webbrowser
 import os
 #####################################################
 # Ref Treant.js https://fperucic.github.io/treant-js/ 
-# 
+# Tools : https://www.jsonschemavalidator.net/
 #
 #####################################################
 class VisualSitemap(object):
@@ -43,7 +43,7 @@ class VisualSitemap(object):
 							"                   'arrow-end': 'block-wide-long'\n" \
 							"               }\n" \
 							"           },\n" \
-							"       children: [\n"
+							"       children: ["
 		js_nodes = ""
 		parent_url_count = 1
 		parent_url_length = len(global_vars.url_tree)
@@ -51,20 +51,8 @@ class VisualSitemap(object):
 			if parent_url == "/":
 				continue
 			if parent_url_count == parent_url_length:
-				#js_nodes += "       {\n" \
-				#                    "           text: { name: \"" + parent_url + "\" },\n" \
-				#                    "           stackChildren: true,\n" \
-				#                    "           contact: { ,\n" \
-				#                    "               href: \"twitter.com\",\n"\
-				#                    "           }, \n" \
-				#                    "           connectors: {\n" \
-				#                    "               style: {\n" \
-				#                    "                   'arrow-end': 'block-wide-long'\n" \
-				#                    "               }\n" \
-				#                    "           }"
-
 				# DEF META mit Links
-				js_nodes += "        {\n" \
+				js_nodes += "{\n" \
 									"			text: {\n" \
 									"				name: \" MetaLinkPhase\",\n" \
 									"				title: \"One of kind\",\n" \
@@ -81,11 +69,11 @@ class VisualSitemap(object):
 					if child_url_length > global_vars.child_nodes:
 						child_url_length = global_vars.child_nodes
 					child_url_count = 1
-					js_nodes += ",\n           children: [\n"
+					js_nodes += ",\n           children: ["
 					for child_url in global_vars.url_tree[parent_url]:
 						if child_url_count == child_url_length:
 							if child_url_length < global_vars.child_nodes:
-								js_nodes += "           { \n" \
+								js_nodes += "{ \n" \
 										"text: { name: \"META-A" + child_url + "\" } }"
 							else:
 								js_nodes += "           { \n" \
@@ -102,7 +90,7 @@ class VisualSitemap(object):
 				js_nodes += "}\n"
 			else:
 				js_nodes += "       {\n" \
-									"           text: { \n" \
+									"          text: { \n" \
 									"					name: \"" + parent_url + "\", \n" \
 									"					contact: { \n" \
 									"						val: \""+ parent_url + "\",\n" \
@@ -125,19 +113,12 @@ class VisualSitemap(object):
 						child_url_length = global_vars.child_nodes
 					child_url_count = 1
 					
-					js_nodes += ",\n           children: [ \n"
+					js_nodes += ",\n           children: ["
 					for child_url in sorted(global_vars.url_tree[parent_url]):
 						if child_url_count == child_url_length:
 							if child_url_length < global_vars.child_nodes:
-								js_nodes += "           { \n" \
-										"text: {\n" \
-												 "name: \"META-PLAN1" + child_url + "\", \n" \
-												 "contact: {\n" \
-												 "		val:  \""+ child_url + "\",\n" \
-												 "		href: \""+ child_url + "\",\n" \
-												 "		target: \"_blank\"\n" \
-												 " }\n" \
-												 "} }"
+								js_nodes += "{ \n" \
+										"text: { name: \"META-PLAN1" + child_url + "\" } }"
 							else:
 								js_nodes += "           { \n" \
 										"text: { name: \"META-PLAN2" + child_url + "\" } },"
@@ -145,16 +126,22 @@ class VisualSitemap(object):
 										"text: { name: \"..." + str(len(global_vars.url_tree[parent_url]) - child_url_length) + " more pages \" } }"
 							break
 						else:
-							js_nodes += "{ " \
-											"text: { \n" \
-													"name: \"META-LAST" + child_url + "\", \n" \
-												    "contact: {\n" \
-												    	"val:  \""+ child_url + "\",\n" \
-												    	"href: \""+ child_url + "\",\n" \
-												    	"target: \"_blank\"\n" \
-												    " }\n" \
-												   "} \n" \
-										"},"
+							# Good Node
+							js_nodes += "{\n" \
+										"           text: { \n" \
+										"					name: \"" + child_url + "\", \n" \
+										"					contact: { \n" \
+										"						val: \""+ child_url + "\",\n" \
+										"						href: \""+ child_url + "\",\n" \
+										"						target: \"_blank\"\n" \
+										"					}\n" \
+										"			},\n" \
+										"           stackChildren: true,\n" \
+										"           connectors: {\n" \
+										"               style: {\n" \
+										"                   'arrow-end': 'block-wide-long'\n" \
+										"               }\n" \
+										"           }," 
 							child_url_count += 1
 
 					js_nodes += "]\n"

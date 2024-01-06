@@ -6,7 +6,7 @@ from sitemap import Sitemap
 from visual_sitemap import VisualSitemap
 from pprint import pprint
 
-
+# Bugs: - Needs a bit too long sometimes Timeout Error 
 
 
 class Crawler(object):
@@ -55,7 +55,6 @@ class Crawler(object):
 
             
             #print("S-ulr : " +s) #DEBUGG
-            
             if any(sub in s for sub in ('.css', '.js', '.woff2','.png','.jpg','.ico','#', '?', 'javascript')):
                 continue
             

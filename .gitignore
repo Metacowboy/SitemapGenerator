@@ -2,4 +2,5 @@ urls.txt
 sitemap.xml
 index.html
 docs/*
+bugs/*
 __pycache__/*.pyc

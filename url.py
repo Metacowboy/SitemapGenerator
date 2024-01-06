@@ -16,8 +16,12 @@ class URL(object):
 
 		# grab the url to save a couple versions (if need)
 		self.complete_url = url
-		self.clean_url = url.replace(global_vars.starting_url, "/")
-
+		self.clean_url   = url 
+		
+		#print("COMPL URL: " + self.complete_url)
+		#self.clean_url = url.replace(global_vars.starting_url, "/")
+		print("CLEAN URL: " + self.clean_url)
+		
 		#verify there is a trailing slash at the end of the url
 		if self.clean_url[-1:] != "/":
 			self.clean_url += "/"
@@ -70,6 +74,7 @@ class URL(object):
 		else:			
 			global_vars.url_tree[self.parent].append(url.replace(self.parent, "/"))
 
+	# Print our Url and Parent Parts
 	def add_to_tree_parent_known(self, url, parent):
 		print("URL: {0} - Parent: {1}".format(url, parent))
 
