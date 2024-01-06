@@ -1,4 +1,4 @@
-starting_url = ""
+starting_url = "https://orf.at"
 sitemap_xml_file_path = ""
 url_list = []
 parent_urls = []

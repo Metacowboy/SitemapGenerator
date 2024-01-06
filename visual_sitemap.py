@@ -50,6 +50,8 @@ class VisualSitemap(object):
 		for parent_url in sorted(global_vars.url_tree):
 			if parent_url == "/":
 				continue
+			
+
 			if parent_url_count == parent_url_length:
 				# DEF META mit Links
 				js_nodes += "        {\n" \
@@ -89,6 +91,7 @@ class VisualSitemap(object):
 					js_nodes += "]\n"
 				js_nodes += "}\n"
 			else:
+				#parent_url_clean = parent_url.replace('//', '')
 				js_nodes += "       {\n" \
 									"           text: { \n" \
 									"					name: \"META-TOP" + parent_url + "\", \n" \
@@ -107,16 +110,23 @@ class VisualSitemap(object):
 									
 									
 				# need to plan children
+				
 				if len(global_vars.url_tree[parent_url]) > 0:
 					child_url_length = len(global_vars.url_tree[parent_url])
 					if child_url_length > global_vars.child_nodes:
 						child_url_length = global_vars.child_nodes
 					child_url_count = 1
 					
+					
 					js_nodes += ",\n           children: [ \n"
 					for child_url in sorted(global_vars.url_tree[parent_url]):
+						child_url = child_url.replace('https:/', '') 
+						child_url = parent_url + child_url
+						# TEST Above
+						
 						if child_url_count == child_url_length:
 							if child_url_length < global_vars.child_nodes:
+								
 								js_nodes += "           { \n" \
 										"text: {\n" \
 												 "name: \"META-PLAN1" + child_url + "\", \n" \
@@ -142,7 +152,7 @@ class VisualSitemap(object):
 						else:
 							js_nodes += "{ " \
 											"text: { \n" \
-													"name: \"META-LAST" + parent_url + child_url + "\", \n" \
+													"name: \"META-LAST" + child_url + "\", \n" \
 												    "contact: {\n" \
 												    	"val:  \""+ child_url + "\",\n" \
 												    	"href: \""+ child_url + "\",\n" \
