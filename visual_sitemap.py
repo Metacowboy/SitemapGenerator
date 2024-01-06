@@ -92,9 +92,10 @@ class VisualSitemap(object):
 				js_nodes += "}\n"
 			else:
 				#parent_url_clean = parent_url.replace('//', '')
+				# META-TOP
 				js_nodes += "       {\n" \
 									"           text: { \n" \
-									"					name: \"META-TOP" + parent_url + "\", \n" \
+									"					name: \"" + parent_url + "\", \n" \
 									"					contact: { \n" \
 									"						val: \""+ parent_url + "\",\n" \
 									"						href: \""+ parent_url + "\",\n" \
@@ -126,20 +127,21 @@ class VisualSitemap(object):
 						
 						if child_url_count == child_url_length:
 							if child_url_length < global_vars.child_nodes:
-								
+								#META-PLAN1
 								js_nodes += "           { \n" \
 										"text: {\n" \
-												 "name: \"META-PLAN1" + child_url + "\", \n" \
+												 "name: \"" + child_url + "\", \n" \
 												 "contact: {\n" \
 												 "		val:  \""+ child_url + "\",\n" \
 												 "		href: \""+ child_url + "\",\n" \
 												 "		target: \"_blank\"\n" \
 												 " }\n" \
 												 "} }"
+							#META-PLAN2
 							else:
 								js_nodes += "           { \n" \
 										"text: { \n" \
-												"name: \"META-PLAN2" + child_url + "\", \n" \
+												"name: \"" + child_url + "\", \n" \
 												"contact: { \n" \
 														"val: \""+ child_url + "\",\n" \
 														"href: \""+ child_url + "\",\n" \
@@ -150,9 +152,10 @@ class VisualSitemap(object):
 										"text: { name: \"..." + str(len(global_vars.url_tree[parent_url]) - child_url_length) + " more pages \" } }"
 							break
 						else:
+							# META-LAST
 							js_nodes += "{ " \
 											"text: { \n" \
-													"name: \"META-LAST" + child_url + "\", \n" \
+													"name: \"" + child_url + "\", \n" \
 												    "contact: {\n" \
 												    	"val:  \""+ child_url + "\",\n" \
 												    	"href: \""+ child_url + "\",\n" \
@@ -178,4 +181,4 @@ class VisualSitemap(object):
 			f.writelines(self.prefix_html)
 			f.writelines(self.js_string)
 			f.writelines(self.suffix_html)
-			#webbrowser.open('file://' + os.path.realpath("index.html"))
+			webbrowser.open('file://' + os.path.realpath("index.html"))

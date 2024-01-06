@@ -1,5 +1,6 @@
 import re
 import urllib.request as req
+import urllib.error
 import global_vars
 from url import URL
 from sitemap import Sitemap
@@ -43,7 +44,7 @@ class Crawler(object):
             x = req.urlopen(metareq ).read().decode('utf-8') #, errors='ignore'
         
             #print(x) #debugg
-        except urllib2.HTTPError(e):
+        except urllib.error.HTTPError(e):
             print ('We failed with error code - %s.' % e.code )
             return False
         
@@ -53,30 +54,24 @@ class Crawler(object):
                 
                 # Find Canonical URL for Relative html urls ORF
                 if s.endswith('.html'):
-                    print('ORGURL :' + s)
-
                     canonical_url = re.findall('<link\s+rel="canonical"\s+href=["\'](\S+?)["\']' , x)
-                    print('REGEX CANO' , canonical_url )
                     if canonical_url:
                             canonical_url = canonical_url[0].rsplit('/', 1)[0] + '/'
-                            print('CANONIC' , canonical_url )
                             s = canonical_url + s
                     else: 
                     
                             print('Not Relative HTML' , s)
 
-                    
-                    
-                    
-
-                
-
-                # MEtaMode PRE If Relative URL /meinSubUrl
+                 # MEtaMode PRE If Relative URL /meinSubUrl
                 if (global_vars.starting_url not in s) and len(s)>2 and s.startswith('/') :
                     s = global_vars.starting_url + s
 
                 
-                #print("S-ulr : " +s) #DEBUGG
+                #Excluded SUB-DOMAINS
+                if any(dom in s for dom in (global_vars.subdom_exclud)):
+                    continue
+
+                #Excluded URLs
                 if any(sub in s for sub in ('{{link}}','data.href','.css', '.js', '.woff2','.png','.jpg','.ico','#', '?', 'javascript')):
                     continue
                 
