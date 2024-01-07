@@ -41,10 +41,11 @@ class Crawler(object):
         try:
             metareq = req.Request(u.complete_url, headers=hdr)
 
-            x = req.urlopen(metareq).read().decode('utf-8') #, errors='ignore'
+            x = req.urlopen(metareq).read().decode('utf-8', errors='ignore') #, errors='ignore'
         
             #print(x) #debugg
-        except urllib.error.HTTPError(e):
+        # Detect if we get a page  html error   
+        except urllib.error.HTTPError as e:
             print ('We failed with error code - %s.' % e.code )
             return False
         

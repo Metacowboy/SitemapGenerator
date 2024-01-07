@@ -3,4 +3,5 @@ sitemap.xml
 index.html
 docs/*
 bug/*
+DEV/*
 __pycache__/*.pyc
