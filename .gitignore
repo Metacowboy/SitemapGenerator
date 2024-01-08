@@ -1,6 +1,7 @@
 urls.txt
 sitemap.xml
 index.html
+*.txt
 docs/*
 bug/*
 DEV/*
