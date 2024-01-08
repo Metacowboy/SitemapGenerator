@@ -26,6 +26,9 @@ class Crawler(object):
                 if len(global_vars.url_list) >= global_vars.urls_tocrawl:    
                     break
             self.save()
+
+            self.wordcount()
+
             Sitemap().build()
             self.build_children()
             VisualSitemap().build()
@@ -108,6 +111,40 @@ class Crawler(object):
         with open('urls.txt', 'w') as f:
             for val in global_vars.url_list:
                 f.writelines(val.complete_url + "\n")
+    
+    def wordcount(self):
+        words=0
+        for url in global_vars.url_list:
+            if url not in ["NULL", "_blank", "None", None, "NoneType"]:
+                if url[0] == "/":
+                    url=url[1:]
+                if base_url in url:
+                    if base_url == url:
+                        pass
+                    if base_url != url and "https://"in url:
+                        url=url[len(base_url)-1:]
+                if "http://" in url:
+                    specific_url=url
+                elif "https://" in url:
+                    specific_url = url
+                else:
+                    specific_url = base_url + url
+                r = requests.get(specific_url)
+                soup = BeautifulSoup(r.text, features="html.parser")
+                for script in soup(["script", "style"]):
+                    script.extract()
+                text = soup.get_text()
+                lines = (line.strip() for line in text.splitlines())
+                chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
+                text = '\n'.join(chunk for chunk in chunks if chunk)
+                text_list = text.split()
+                print(f"{specific_url}: {len(text_list)} words")
+                words += len(text_list)
+            else:
+                pass
+        print(f"Total: {words} words")
+
+        pass
 
     def build_children(self):
         pass

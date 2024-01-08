@@ -15,16 +15,11 @@ class URL(object):
 			#print("MYURL: " +url)
 
 		# GET CANONICAL to Build relative html pages 
-		# TODO
+		
 
 		# grab the url to save a couple versions (if need)
 		self.complete_url = url
 		self.clean_url   = url 
-		
-		# DEBUGG
-		#print("COMPL URL: " + self.complete_url)
-		#self.clean_url = url.replace(global_vars.starting_url, "/")
-		#print("CLEAN URL: " + self.clean_url)
 		
 		#verify there is a trailing slash at the end of the url
 		if self.clean_url[-1:] != "/":
