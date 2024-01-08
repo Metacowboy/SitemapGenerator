@@ -4,5 +4,5 @@ index.html
 *.txt
 docs/*
 bug/*
-DEV/*
+DEV/
 __pycache__/*.pyc
