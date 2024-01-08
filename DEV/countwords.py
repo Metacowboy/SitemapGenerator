@@ -1,45 +1,36 @@
 import requests
-from urllib.request import urlopen
+from requests.adapters import HTTPAdapter
+
+from urllib.request import Request, urlopen
 from urllib.parse import urlparse
 import urllib.error
+
+#import urllib3
+#from urllib3.util.retry import Retry
+#urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 from bs4 import BeautifulSoup
-import urllib3
-
-from requests.adapters import HTTPAdapter
-from urllib3.util.retry import Retry
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
 url_list = []
 base_url =''
+hdr = {'User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36'}
 
-session = requests.Session()
-session.headers['User-Agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36'
+
+#session = requests.Session()
+#session.headers['User-Agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36'
 #session.get(url)
-
-session = requests.Session()
-retry = Retry(connect=3, backoff_factor=0.5)
-adapter = HTTPAdapter(max_retries=retry)
-session.mount('http://', adapter)
-session.mount('https://', adapter)
+#retry = Retry(connect=3, backoff_factor=0.5)
+#adapter = HTTPAdapter(max_retries=retry)
+#session.mount('http://', adapter)
+#session.mount('https://', adapter)
 
 
 base_url  = input("Please enter the website URL Counting the Words for: >> ")
 
 session.get(base_url)
 
-#Request(
-#    url='http://www.cmegroup.com/trading/products/#sortField=oi&sortAsc=false&venues=3&page=1&cleared=1&group=1', 
-#    headers={'User-Agent': 'Mozilla/5.0'}
-
-#req = urllib2.Request('http://www.example.com/')
-#req.add_header('Referer', 'http://www.python.org/')
-#resp = urllib2.urlopen(req)
-#content = resp.read()
-
-
 try:
-    
-    html = session.urlopen(base_url)
+    req = Request(url=base_url, headers=hdr)
+    html  = urlopen(req)
 
 except urllib.error.HTTPError as err:
     print(f'A HTTPError was thrown: {err.code} {err.reason}')
