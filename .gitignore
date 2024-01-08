@@ -2,7 +2,7 @@ urls.txt
 sitemap.xml
 index.html
 *.txt
-docs/*
-bug/*
+docs/
+bug/
 DEV/
 __pycache__/*.pyc
